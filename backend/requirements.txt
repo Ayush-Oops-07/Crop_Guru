@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+alembic
+python-dotenv
+python-multipart
+pydantic
+pgvector
+requests
+google-generativeai
+psycopg2-binary
+langdetect
+googletrans==4.0.0-rc1
+google-cloud-speech
+google-cloud-texttospeech
+httpx
