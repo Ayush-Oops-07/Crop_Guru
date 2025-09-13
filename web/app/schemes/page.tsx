@@ -21,9 +21,9 @@ export default function SchemesPage() {
     const fetchSchemes = async () => {
       let url = "";
       if (selectedState === "Central") {
-        url = "http://127.0.0.1:8000/schemes/central";
+        url = "crop-guru.onrender.com/schemes/central";
       } else if (selectedState) {
-        url = `http://127.0.0.1:8000/schemes/state?state=${selectedState}`;
+        url = `http://crop-guru.onrender.com/schemes/state?state=${selectedState}`;
       }
 
       if (url) {
