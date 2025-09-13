@@ -11,7 +11,7 @@ export default function LoginPage() {
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     try {
-      const res = await fetch("http://crop-guru.onrender.com/login", {
+      const res = await fetch("https://crop-guru.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone, password }),
@@ -20,7 +20,6 @@ export default function LoginPage() {
       const data = await res.json();
 
       if (res.ok) {
-        // ✅ सुधार: अब डेटा सही key के साथ लोकल स्टोरेज में सेव हो रहा है
         localStorage.setItem("farmer_name", data.farmer_name);
         localStorage.setItem("farmer_id", data.farmer_id);
         localStorage.setItem("access_token", data.access_token);
