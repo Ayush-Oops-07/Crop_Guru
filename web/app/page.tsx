@@ -24,7 +24,7 @@ export default function Home() {
       const storedToken = localStorage.getItem("access_token");
       if (storedToken) {
         try {
-          const res = await fetch("http://127.0.0.1:8000/profile", {
+          const res = await fetch("https://crop-guru.onrender.com/profile", {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
