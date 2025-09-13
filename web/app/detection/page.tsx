@@ -6,7 +6,7 @@ export default function DetectionPage() {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/detection", { method: "POST" })
+    fetch("http://crop-guru.onrender.com/detection", { method: "POST" })
       .then((res) => res.json())
       .then(setData);
   }, []);
