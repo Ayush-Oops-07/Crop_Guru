@@ -7,6 +7,7 @@ python-dotenv
 python-multipart
 pydantic
 pgvector
+psycopg2
 requests
 google-generativeai
 psycopg2-binary
@@ -15,3 +16,7 @@ googletrans==4.0.0-rc1
 google-cloud-speech
 google-cloud-texttospeech
 httpx
+ultralytics
+pillow
+passlib
+python-jose
