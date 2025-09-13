@@ -15,7 +15,7 @@ export default function CropAdvicePage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://crop-guru.onrender.com/advice`, {
+      const res = await fetch(`https://crop-guru.onrender.com/advice`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
