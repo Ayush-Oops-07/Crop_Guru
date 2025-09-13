@@ -13,7 +13,7 @@ export default function IrrigationPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://127.0.0.1:8000/irrigation/${crop}`);
+      const res = await fetch(`http://crop-guru.onrender.com/irrigation/${crop}`);
       const data = await res.json();
 
       if (data.error) {
