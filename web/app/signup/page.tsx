@@ -7,24 +7,28 @@ export default function SignupPage() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [location, setLocation] = useState(""); // ✅ Location state जोड़ा गया
-  const [crops, setCrops] = useState("");       // ✅ Crops state जोड़ा गया
+  const [location, setLocation] = useState("");
+  const [crops, setCrops] = useState("");
   const router = useRouter();
+
+  // ✅ Use environment variable for backend URL
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://crop-guru.onrender.com";
 
   async function handleSignup(e: React.FormEvent) {
     e.preventDefault();
     try {
-      const res = await fetch("http://crop-guru.onrender.com/signup", {
+      // Signup request
+      const res = await fetch(`${BACKEND_URL}/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        // ✅ सुधार: सभी 5 फ़ील्ड backend को भेजें
-        body: JSON.stringify({ name, phone, password, location, crops }), 
+        body: JSON.stringify({ name, phone, password, location, crops }),
       });
 
       if (res.ok) {
         alert("Signup successful! Logging you in...");
-        
-        const loginRes = await fetch("http://localhost:8000/login", {
+
+        // Login request (same backend)
+        const loginRes = await fetch(`${BACKEND_URL}/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ phone, password }),
@@ -70,7 +74,7 @@ export default function SignupPage() {
           className="w-full border p-2 rounded"
           required
         />
-        
+
         <input
           type="text"
           placeholder="Phone"
@@ -89,7 +93,6 @@ export default function SignupPage() {
           required
         />
 
-        {/* ✅ नए इनपुट फ़ील्ड जोड़े गए हैं */}
         <input
           type="text"
           placeholder="Location"
