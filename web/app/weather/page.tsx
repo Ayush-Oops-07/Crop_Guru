@@ -13,7 +13,7 @@ export default function WeatherPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://127.0.0.1:8000/weather?city=${city}`);
+      const res = await fetch(`http://crop-guru.onrender.com/weather?city=${city}`);
       const data = await res.json();
 
       if (data.error) {
