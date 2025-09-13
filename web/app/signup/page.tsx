@@ -14,7 +14,7 @@ export default function SignupPage() {
   async function handleSignup(e: React.FormEvent) {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8000/signup", {
+      const res = await fetch("http://crop-guru.onrender.com/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // ✅ सुधार: सभी 5 फ़ील्ड backend को भेजें
