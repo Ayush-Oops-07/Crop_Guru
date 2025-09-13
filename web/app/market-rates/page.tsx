@@ -10,7 +10,7 @@ export default function MarketRatesPage() {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const res = await fetch("crop-guru.onrender.com/market-rates");
+        const res = await fetch("https://crop-guru.onrender.com/market-rates");
         const data = await res.json();
 
         if (data.error) {
