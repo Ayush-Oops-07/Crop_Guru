@@ -6,7 +6,7 @@ export default function LoansPage() {
   const [loans, setLoans] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("http://crop-guru.onrender.com/loans")
+    fetch("https://crop-guru.onrender.com/loans")
       .then((res) => res.json())
       .then(setLoans);
   }, []);
