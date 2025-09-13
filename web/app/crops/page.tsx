@@ -13,7 +13,7 @@ export default function CropsPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://127.0.0.1:8000/crops/${crop}`);
+      const res = await fetch(`http://crop-guru.onrender.com/crops/${crop}`);
       const data = await res.json();
 
       if (data.error) {
