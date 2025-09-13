@@ -11,8 +11,7 @@ export default function SignupPage() {
   const [crops, setCrops] = useState("");
   const router = useRouter();
 
-  // ✅ Use environment variable for backend URL
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://crop-guru.onrender.com";
+  const BACKEND_URL ="https://crop-guru.onrender.com";
 
   async function handleSignup(e: React.FormEvent) {
     e.preventDefault();
