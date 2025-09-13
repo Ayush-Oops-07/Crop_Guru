@@ -14,7 +14,7 @@ export default function FertilizerInfoPage() {
     setError("");
     try {
       const res = await fetch(
-        `http://crop-guru.onrender.com/fertilizer-info?name=${name}`
+        `https://crop-guru.onrender.com/fertilizer-info?name=${name}`
       );
       const data = await res.json();
 
