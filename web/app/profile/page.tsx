@@ -12,7 +12,7 @@ export default function ProfilePage() {
     const storedId = localStorage.getItem("farmer_id");
 
     if (token && storedId) {
-      fetch("http://crop-guru.onrender.com/profile", {
+      fetch("https://crop-guru.onrender.com/profile", {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((res) => res.json())
