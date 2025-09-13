@@ -6,7 +6,7 @@ export default function QueriesPage() {
   const [queries, setQueries] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/queries")
+    fetch("http://crop-guru.onrender.com/queries")
       .then((res) => res.json())
       .then(setQueries);
   }, []);
