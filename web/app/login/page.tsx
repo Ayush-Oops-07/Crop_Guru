@@ -11,7 +11,7 @@ export default function LoginPage() {
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8000/login", {
+      const res = await fetch("http://crop-guru.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone, password }),
