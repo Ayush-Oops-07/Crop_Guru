@@ -19,15 +19,19 @@ init_db()
 
 app = FastAPI(title="Crop-Guru API", version="0.1")
 
-# Configure CORS
-origins = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "*").split(",")]
+origins = [
+    "https://crop-guru.vercel.app",  # Vercel frontend URL
+    "http://localhost:3000",          # local dev
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 # Dependency to get DB session
 def get_db():
     db = SessionLocal()
