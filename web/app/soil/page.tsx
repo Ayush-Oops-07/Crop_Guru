@@ -13,7 +13,7 @@ export default function SoilPage() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch(`http://crop-guru.onrender.com/soil/${city}`);
+      const res = await fetch(`https://crop-guru.onrender.com/soil/${city}`);
       const data = await res.json();
 
       if (data.error) {
